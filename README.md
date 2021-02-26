@@ -9,7 +9,7 @@ A library that gets infos from APK.
 $ pip install apkutils
 ```
 
-### 命令行使用
+### Options
 
 ```
 $ python3 -m apkutils -h
@@ -28,25 +28,41 @@ optional arguments:
 
 ```
 
-### 用法
+### Usage
 
 ```python
 import binascii
 
 from apkutils import __VERSION__, APK
 apk = APK('test.apk')
+```
 
+Get AndroidManifest.json.
+```python
 if apk.get_manifest():
     print(json.dumps(apk.get_manifest(), indent=1))
 elif apk.get_org_manifest():
     print(apk.get_org_manifest())
+```
 
+Get strings defined in APK.
+```python
 for item in apk.get_strings():
     print(binascii.unhexlify(item).decode(errors='ignore'))
+```
 
+Get files in APK.
+```python
 for item in apk.get_files():
     print(item)
+```
+```
+{'name': 'res/layout/action_bar_item.xml', 'type': 'axml', 'time': '14300101000000', 'crc': '27FA35BC'}
+...
+```
 
+Get certificates defined in APK.
+```python
 for item in apk.get_certs():
     print(item)
 ```
