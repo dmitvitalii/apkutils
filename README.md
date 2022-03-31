@@ -1,6 +1,9 @@
 # apkutils [![PyPI version](https://badge.fury.io/py/apkutils.svg)](https://badge.fury.io/py/apkutils) [![GitHub license](https://img.shields.io/github/license/mikusjelly/apkutils.svg)](https://github.com/mikusjelly/apkutils/blob/master/LICENSE)
 
 
+请移步 gitee.com/kin9-0rz/apkutils ，github上的代码，不再同步。
+
+
 A library that gets infos from APK.
 
 ### Install
